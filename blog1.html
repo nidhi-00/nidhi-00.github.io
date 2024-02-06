@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Blog Post 1</title>
+    
+    <style>
+        .clear-comments-btn {
+            background-color: #4b4a49;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .blog-container {
+            max-width: 750px; 
+            margin: auto;
+            padding: 20px;
+            background-color: #202020;
+            color: #e5e5e5;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .comment-section {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .comment-input {
+            flex-grow: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .comment-btn {
+            background-color: #fed700;
+            color: #202020;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .comments {
+            margin-top: 20px;
+        }body {
+            font-family: 'Lexend', sans-serif;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .blog-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fed700;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-title {
+            color:#202020;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .blog-content {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .likes-section {
+            color:#202020;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .likes-btn {
+            background-color: #4b4a49;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .comment-section {
+            margin-bottom: 20px;
+        }
+
+        .comment-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .comment-btn {
+            background-color:#4b4a49;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .comments {
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+
+        .comment {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-header">
+    
+        <a href="index.html" class="back-to-website">
+            <i class="fas fa-times"></i>
+        </a>
+    </div>
+
+<div class="blog-container">
+    <h2 class="blog-title">Blog Post 1: A Tale of Toilets</h2>
+    <div class="blog-content">
+        <p>
+            After conducting a thorough review of most of the (Gents’) toilets on campus, and getting weird glances from people who saw me taking notes and murmuring “Hmmm, nice, very nice”, I have prepared a five-point scale that measures,
+
+Sanitation, the sanitary conditions of the toilets,
+Population, the number of people using it,
+Dimension, the size of an individual toilet, including the area surrounding it,
+Aggregation, the number of toilets, and,
+Dissociation, the distance from students.
+Bakul
+Ah, Bakul washrooms, the stuff nightmares are made of. Living on the first floor, I am fortunate enough to have access to two western toilets in my corridor. The other floors? Not so much.
+
+In general, the resident to western toilet ratio is 50 to 1. A rather terrifying fraction – it would amount to a waiting time of 125 minutes if people didn’t have varying sleep schedules. Even then, the real waiting time of about 10 minutes in the mornings results in the population and aggregation scores being at a meagre 1 out of 5.
+
+Despite the staff working regularly to offset the daily damage done by the nivasis, there are cobwebs in multiple places (I have an eight-legged shower buddy). The absence of soap and filthy footprints after 8 AM make the sanitation score rate one and a half.
+
+The toilets are just fifty meters away from the farthest rooms, and the dimensions are in the range of 2 feet by 3 feet. So, dimensions and dissociation from student clusters are perfect fives.
+
+Update for Facchas – It’s no longer as bad as it used to be 🙂
+
+There are about 6 western toilets on each floor now.
+
+Parijat
+I tried, but they didn’t let me in. I tried again, and they threatened me with disco. Sighs…
+
+Huh? Yeah? Raid?! What do you mean raid?
+
+OBH
+Probably isn’t the safest place for me to be. Yet, I visited the washrooms… and was greeted by one that hasn’t been renovated. It was a terrifying sight.
+
+Imagine a government building, except that it isn’t a building, but a roadside Dhaba on a highway. Get it? No? Alright, ****n *****h (censored on request) explained it rather well –
+dimly lit, stinky, cramped up. It’s repulsive to think about. However, with there being one for every twelve rooms, it isn’t burdened with heavy footfall like Bakul.
+
+Here are the results – Dissociation: 5, Aggregation: 2, Population: 4, Sanitation: 1 and Dimension: 2.
+
+
+        </p>
+        
+    </div>
+
+    <div class="likes-section">
+        <button class="likes-btn" onclick="toggleLike()">Like</button>
+        <span id="likeCount">0</span>
+    </div>
+
+    <div class="comment-section">
+        <input type="text" id="commentInput" class="comment-input" placeholder="Enter your comment">
+        <button class="comment-btn" onclick="addComment()">Add Comment</button>
+        <button class="clear-comments-btn" onclick="clearComments()">Clear Comments</button>
+    </div>
+
+    <div class="comments" id="commentsSection">
+       
+    </div>
+</div>
+
+<script>
+    
+    function toggleLike() {
+        let likeCount = parseInt(localStorage.getItem('likeCount')) || 0;
+        let liked = localStorage.getItem('liked') === 'true' || false;
+
+        liked = !liked;
+        likeCount = liked ? likeCount + 1 : likeCount - 1;
+
+        localStorage.setItem('liked', liked);
+        localStorage.setItem('likeCount', likeCount);
+
+        updateLikes();
+    }
+
+    
+    function updateLikes() {
+        let likeCount = parseInt(localStorage.getItem('likeCount')) || 0;
+        let liked = localStorage.getItem('liked') === 'true' || false;
+
+        document.getElementById('likeCount').innerText = likeCount;
+        document.querySelector('.likes-btn').innerText = liked ? 'Unlike' : 'Like';
+    }
+
+    
+    function addComment() {
+        let commentInput = document.getElementById('commentInput');
+        let comment = commentInput.value.trim();
+
+        if (comment !== '') {
+            let commentsSection = document.getElementById('commentsSection');
+            let commentElement = document.createElement('div');
+            commentElement.classList.add('comment');
+            commentElement.innerText = comment;
+
+            commentsSection.appendChild(commentElement);
+
+            let storedComments = JSON.parse(localStorage.getItem('comments')) || [];
+            storedComments.push(comment);
+            localStorage.setItem('comments', JSON.stringify(storedComments));
+
+            commentInput.value = ''; 
+        }
+    }
+
+    
+    function loadComments() {
+        let commentsSection = document.getElementById('commentsSection');
+        let storedComments = JSON.parse(localStorage.getItem('comments')) || [];
+
+        storedComments.forEach(comment => {
+            let commentElement = document.createElement('div');
+            commentElement.classList.add('comment');
+            commentElement.innerText = comment;
+
+            commentsSection.appendChild(commentElement);
+        });
+    }
+
+    
+    window.onload = function () {
+        updateLikes();
+        loadComments();
+    };
+    
+    function clearComments() {
+        let commentsSection = document.getElementById('commentsSection');
+        commentsSection.innerHTML = ''; 
+
+        localStorage.removeItem('comments');
+    }
+</script>
+
+<!-- Inside your blog.html content -->
+<div class="blog-header">
+    
+    <a href="path/to/main-website" class="back-to-website">
+        <i class="fas fa-times"></i>
+    </a>
+</div>
+
+
+</body>
+</html>
