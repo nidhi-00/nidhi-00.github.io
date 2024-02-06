@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Blog Post 2</title>
+    <style>
+        .clear-comments-btn {
+            background-color: #4b4a49;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .blog-container {
+            max-width: 750px; 
+            margin: auto;
+            padding: 20px;
+            background-color: #202020;
+            color: #e5e5e5;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .comment-section {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .comment-input {
+            flex-grow: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .comment-btn {
+            background-color: #fed700;
+            color: #202020;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .comments {
+            margin-top: 20px;
+        }body {
+            font-family: 'Lexend', sans-serif;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .blog-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fed700;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-title {
+            color:#202020;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .blog-content {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .likes-section {
+            color:#202020;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .likes-btn {
+            background-color: #4b4a49;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .comment-section {
+            margin-bottom: 20px;
+        }
+
+        .comment-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .comment-btn {
+            background-color: #4b4a49;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .comments {
+            color:#000000;
+            border-top: 1px solid #000000;
+            padding-top: 10px;
+        }
+
+        .comment {
+            color: #000000;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-header">
+    
+        <a href="index.html" class="back-to-website">
+            <i class=""></i>
+        </a>
+    </div>
+<div class="blog-container">
+    <h2 class="blog-title">Blog Post 2: A CCC Response to ‘Campus Canine Affairs’</h2>
+    <div class="blog-content">
+        <p>
+            The primary responsibilities of the CCC volunteers are to make sure the dogs are well fed daily, their injuries, if any, are attended to, all dogs are regularly vaccinated twice a year and to be neutered, if needed. Vet visits are also done as and when required. 
+
+            Apart from this, the CCC also conducts sessions to help students get accustomed to the dogs on campus and make them aware of basic dog behaviour.
+            
+            For example, dogs are territorial beings, so late at night or very early in the morning, when there are very few people around and a dog sees a solitary figure, there is a chance they might see it as a threat, and might bark or come running. Such an event isn’t aggressive behaviour or an attack. In such a situation, the person can simply stand and whistle or call out its name. Such incidents have happened even with CCC members and this is how they handled it. 
+            
+            The CCC ensures that all the dogs are neutered so that their population doesn’t grow, and overtime the number of dogs on campus decreases. But every few years, a new dog joins the campus. They usually come through holes/gaps in the campus walls. The CCC regularly reports to the authorities to fix such issues so that the dog population may remain stable. 
+            
+            Referring now to the dog incidents mentioned in the mail and earlier article, this is in response to the incident mentioned in the mail where a dog in Juice Canteen (JC) is known to be biting people. Firstly it is not biting, secondly the dog in question is very young and is going through what is called teething. It happens even to babies. The dog is extremely playful and friendly, and expresses it through pulling clothes or, slippers. The CCC agrees it’s not a desirable behaviour and students shouldn’t be getting their stuff torn, but it’s a long term behaviour and it can be curbed by tapping on the dog’s nose or head, or scolding back and letting it know that you don’t appreciate it. The CCC faced a similar issue with the dog in the beginning and by giving negative reinforcement to this behaviour they were able to bring it down significantly. 
+        </p>
+        
+    </div>
+
+    <div class="likes-section">
+        <button class="likes-btn" onclick="toggleLike()">Like</button>
+        <span id="likeCount">0</span>
+    </div>
+
+    <div class="comment-section">
+        <input type="text" id="commentInput" class="comment-input" placeholder="Enter your comment">
+        <button class="comment-btn" onclick="addComment()">Add Comment</button>
+        <button class="clear-comments-btn" onclick="clearComments()">Clear Comments</button>
+    </div>
+
+    <div class="comments" id="commentsSection">
+     
+    </div>
+</div>
+
+<script>
+    
+    function toggleLike() {
+        let likeCount = parseInt(localStorage.getItem('likeCount')) || 0;
+        let liked = localStorage.getItem('liked') === 'true' || false;
+
+        liked = !liked;
+        likeCount = liked ? likeCount + 1 : likeCount - 1;
+
+        localStorage.setItem('liked', liked);
+        localStorage.setItem('likeCount', likeCount);
+
+        updateLikes();
+    }
+
+    
+    function updateLikes() {
+        let likeCount = parseInt(localStorage.getItem('likeCount')) || 0;
+        let liked = localStorage.getItem('liked') === 'true' || false;
+
+        document.getElementById('likeCount').innerText = likeCount;
+        document.querySelector('.likes-btn').innerText = liked ? 'Unlike' : 'Like';
+    }
+
+    
+    function addComment() {
+        let commentInput = document.getElementById('commentInput');
+        let comment = commentInput.value.trim();
+
+        if (comment !== '') {
+            let commentsSection = document.getElementById('commentsSection');
+            let commentElement = document.createElement('div');
+            commentElement.classList.add('comment');
+            commentElement.innerText = comment;
+
+            commentsSection.appendChild(commentElement);
+
+           
+            let storedComments = JSON.parse(localStorage.getItem('comments')) || [];
+            storedComments.push(comment);
+            localStorage.setItem('comments', JSON.stringify(storedComments));
+
+            commentInput.value = ''; 
+        }
+    }
+
+   
+    function loadComments() {
+        let commentsSection = document.getElementById('commentsSection');
+        let storedComments = JSON.parse(localStorage.getItem('comments')) || [];
+
+        storedComments.forEach(comment => {
+            let commentElement = document.createElement('div');
+            commentElement.classList.add('comment');
+            commentElement.innerText = comment;
+
+            commentsSection.appendChild(commentElement);
+        });
+    }
+
+    
+    window.onload = function () {
+        updateLikes();
+        loadComments();
+    };
+    
+    function clearComments() {
+        let commentsSection = document.getElementById('commentsSection');
+        commentsSection.innerHTML = ''; 
+        localStorage.removeItem('comments');
+    }
+</script>
+
+</body>
+</html>
